@@ -35,3 +35,10 @@ Use CI/CD to deploy a Python web: https://docs.microsoft.com/en-us/azure/devops/
 Continuous Delivery with Azure Pipelines in Python: https://www.youtube.com/watch?v=3KF9DltYvZU
 
 add lint: https://www.youtube.com/watch?v=TItOatTfAOc
+
+## edge device (coral)
+1. setup enviroment cho coral: cài đặt TPU, clone example project classification, tạo virtualenv python, install library python.
+link: https://github.com/google-coral/tflite/tree/master/python/examples/classification
+2. down pretrain model từ tfhub (vd https://tfhub.dev/tensorflow/coral-model/mobilenet_v2_1.0_224_quantized/1/default/1)
+3. trong trường hợp model chưa đc compile để sử dụng cho TPU, có thể dùng convert của coral (chú ý model dùng để convert fai là tflite, và đã đc quantized)
+có thể dùng docker để tạo enviroment dùng để convert nếu như k dùng linux (convert này yêu cầu os linux => tham khảo dockerfile ở https://github.com/paiml/practical-mlops-book/tree/main/chapter3)
